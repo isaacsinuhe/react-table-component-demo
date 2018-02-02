@@ -1,3 +1,19 @@
-.TData * {
-    color: red;
+.TData {
+    padding: 5px;
+    border: 2px solid red;
+}
+.TData .content {
+    display: flex;
+}
+.TData .data {
+    padding: 2px;
+    align-self: center;
+    vertical-align: middle;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.TData img.avatar {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
 }

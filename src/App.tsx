@@ -1,14 +1,12 @@
 import * as React from 'react';
 import { Table, THead, TH, TRows, TData } from './components/TableComponent';
 import axios from 'axios';
-import './App.css';
 
 class App extends React.Component {
   state = { data: null };
   componentDidMount () {
     axios.get('https://jsonplaceholder.typicode.com/users')
     .then(({ data }) => {
-      console.log(data);
       this.setState({ data });
     });
   }
@@ -25,9 +23,9 @@ class App extends React.Component {
 
         <TRows data={this.state.data}>
           <TData forProp="name"/>
-          <TData avatar="a.com" forProp="username"/>
-          <TData forProp="address.suite"/>
-          <TData forProp="website"/>
+          <TData avatar="http://oi66.tinypic.com/2a0n4ue.jpg" forProp="username"/>
+          <TData forProp="address.suite address.city"/>
+          <TData linkTo="website" forProp="website"/>
         </TRows>
 
       </Table>
