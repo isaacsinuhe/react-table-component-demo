@@ -1,20 +1,36 @@
 import * as React from 'react';
+import { Table, THead, TH, TRows, TData } from './components/TableComponent';
+import axios from 'axios';
 import './App.css';
 
-const logo = require('./logo.svg');
-
 class App extends React.Component {
+  state = { data: null };
+  componentDidMount () {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(({ data }) => {
+      console.log(data);
+      this.setState({ data });
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <Table>
+        <THead>
+          <TH title="Full Name"/>
+          <TH title="User Name"/>
+          <TH title="Adress"/>
+          <TH title="Uri"/>
+        </THead>
+
+        <TRows data={this.state.data}>
+          <TData forProp="name"/>
+          <TData avatar="a.com" forProp="username"/>
+          <TData forProp="address.suite"/>
+          <TData forProp="website"/>
+        </TRows>
+
+      </Table>
     );
   }
 }
