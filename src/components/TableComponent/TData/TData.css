@@ -1,3 +1,4 @@
+/* xs devices */
 @media only screen
 and (max-width: 519px) {
     .TData .data {
@@ -10,8 +11,8 @@ and (max-width: 519px) {
         padding: 5px;
         border: 2px solid red;
         align-items: center;
+        overflow: hidden;
     }
-    
     .TData .dataContainer {
         padding: 2px;
         flex-flow: column nowrap;
@@ -19,7 +20,69 @@ and (max-width: 519px) {
     }
     .TData img.avatar {
         border-radius: 50%;
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* small devices */
+@media only screen
+and (min-width: 520px)
+and (max-width: 759px) {
+    .TData {
+        flex: 0 1 100%;
+        display: flex;
+        padding: 5px;
+        border: 2px solid red;
+        overflow: hidden;
+        align-items: center;
+    }
+    .TData .dataContainer {
+        padding: 2px;
+        flex-flow: column nowrap;
+        display: flex;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    .TData img.avatar {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+    .TData .data {
+        width: 100%;
+        color: red;
+    }
+}
+
+/* large devices */
+@media only screen
+and (min-width: 760px)
+and (max-width: 959px) {
+    .TData {
+        flex: 0 1 100%;
+        display: flex;
+        padding: 5px;
+        border: 2px solid red;
+        overflow: hidden;
+        align-items: center;
+    }
+    .TData .dataContainer {
+        padding: 2px;
+        flex-flow: column nowrap;
+        display: flex;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    .TData img.avatar {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+    .TData .data {
+        width: 100%;
+        color: red;
     }
 }

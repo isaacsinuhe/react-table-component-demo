@@ -260,7 +260,7 @@ class App extends React.Component {
             <TData forProp="name"/>
             <TData avatar="http://oi66.tinypic.com/2a0n4ue.jpg" forProp="username"/>
             <TData forProp="address.suite address.city"/>
-            <TData linkTo="website" forProp="website"/>
+            <TData linkTo="http://www.google.com" forProp="website"/>
           </TRows>
 
           <TFoot legend="This is the footer"/>

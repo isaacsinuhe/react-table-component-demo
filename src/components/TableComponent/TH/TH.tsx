@@ -6,6 +6,10 @@ export type THProps = {
 };
 export function TH (props: THProps) {
     return (
-        <div className="TH">{props.title}</div>
+        <div className="TH">
+            <div className="content">
+                {props.title}
+            </div>
+        </div>
     );
 }

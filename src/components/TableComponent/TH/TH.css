@@ -1,3 +1,4 @@
+/* xs devices */
 @media only screen
 and (max-width: 519px) {
     .TH {
@@ -6,5 +7,43 @@ and (max-width: 519px) {
         display: flex;
         align-items: center;
         border: 2px solid red;
+    }
+    .TH .content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* small devices */
+@media only screen
+and (min-width: 520px)
+and (max-width: 759px) {
+    .TH {
+        flex: 0 1 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        border: 2px solid red;
+    }
+    .TH .content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* large devices */
+@media only screen
+and (min-width: 760px)
+and (max-width: 959px) {
+    .TH {
+        flex: 0 1 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        border: 2px solid red;
+    }
+    .TH .content {
+        width: 100%;
+        text-align: center;
     }
 }

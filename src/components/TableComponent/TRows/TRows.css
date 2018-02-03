@@ -1,3 +1,14 @@
+.TRows .row:nth-child(odd) {
+    background-color: lightgray;
+}
+.TRows .row:nth-child(even) {
+    background-color: lightslategray;
+}
+.TRows::-webkit-scrollbar {
+    display: none;
+}
+
+/* xs devices */
 @media only screen
 and (max-width: 519px) {
     .TRows {
@@ -6,11 +17,49 @@ and (max-width: 519px) {
         flex-flow: row nowrap;
         overflow: auto;
     }
-    .TRows .row {        
+    .TRows .row {
         flex: 0 1 100%;
         display: flex;
         flex-flow: column nowrap;
         overflow: visible;
         align-items: stretch;
+    }
+}
+
+/* small devices */
+@media only screen
+and (min-width: 520px)
+and (max-width: 759px) {
+    .TRows {
+        flex: 0 1 85%;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: auto;
+    }
+    .TRows .row {
+        height: 100%;
+        min-height: 60px;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+    }
+}
+
+/* large devices */
+@media only screen
+and (min-width: 760px)
+and (max-width: 959px) {
+    .TRows {
+        flex: 0 1 85%;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: auto;
+    }
+    .TRows .row {
+        height: 100%;
+        min-height: 60px;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
     }
 }
