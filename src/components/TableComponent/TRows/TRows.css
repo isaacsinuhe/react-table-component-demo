@@ -1,0 +1,16 @@
+@media only screen
+and (max-width: 519px) {
+    .TRows {
+        flex: 0 1 70%;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: auto;
+    }
+    .TRows .row {        
+        flex: 0 1 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: visible;
+        align-items: stretch;
+    }
+}

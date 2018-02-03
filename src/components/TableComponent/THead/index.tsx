@@ -1,1 +1,1 @@
-export { THead } from './THead';
+export * from './THead';

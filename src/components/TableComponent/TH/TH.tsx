@@ -1,10 +1,11 @@
 import * as React from 'react';
+import './TH.css';
 
-type THProps = {
+export type THProps = {
     title: string
 };
 export function TH (props: THProps) {
     return (
-        <th>{props.title}</th>
+        <div className="TH">{props.title}</div>
     );
 }

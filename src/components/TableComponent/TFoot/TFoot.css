@@ -1,0 +1,8 @@
+.TFoot {
+    height: 10%;
+}
+
+.TFoot .content{
+    padding: 5px;
+    text-align: center;
+}

@@ -1,0 +1,10 @@
+@media only screen
+and (max-width: 519px) {
+    .THead {
+        width: 30%;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: hidden;
+        align-items: stretch;
+    }
+}

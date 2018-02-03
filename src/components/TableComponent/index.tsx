@@ -1,5 +1,6 @@
-export { Table } from './Table';
-export { TData } from './TData';
-export { TH } from './TH';
-export { THead } from './THead';
-export { TRows } from './TRows';
+export * from './Table';
+export * from './TData';
+export * from './TH';
+export * from './THead';
+export * from './TRows';
+export * from './TFoot';

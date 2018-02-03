@@ -1,10 +1,9 @@
 import * as React from 'react';
-
 import './TData.css'; 
 
 // tslint:disable-next-line:no-any
 type dataType = { [i: string]: any };
-type TDataProps = {
+export type TDataProps = {
     forProp: string
     data?: dataType
     avatar?: string
@@ -21,7 +20,10 @@ export function TData (props: TDataProps) {
             tdDataArray = getArrayFromForProps(props.data, props.forProp);
         }
         if (props.linkTo) {
-            linkTo = `https://www.${getDataFromDottedString(props.data, props.linkTo)}`;
+            linkTo = getDataFromDottedString(
+                props.data, 
+                props.linkTo
+            );
         }
         if (props.avatar) {
             avatar = getDataFromDottedString(props.data, props.avatar);
@@ -29,28 +31,26 @@ export function TData (props: TDataProps) {
     }
     
     return (
-        <td className="TData">
-            <div className="content">
+        <div className="TData">
+            {
+                avatar ? 
+                <img className="avatar" src={avatar} alt={`imageFor-${tdDataArray}`}/> :
+                false
+            }
+            <div className="dataContainer">
                 {
-                    avatar ? 
-                    <img className="avatar" src={avatar} alt={`imageFor-${tdDataArray}`}/> :
-                    false
+                    tdDataArray.map((data, index) => 
+                        linkTo ?
+                            <a key={index} href={linkTo}>
+                            {data}
+                        </a> :
+                        <div className="data" key={index}>
+                            {data}
+                        </div>
+                    )
                 }
-                <div className="data">
-                    {
-                        tdDataArray.map((data, index) => 
-                            linkTo ?
-                                <a key={index} href={linkTo}>
-                                {data}
-                            </a> :
-                            <span key={index}>
-                                {data}
-                            </span>
-                        )
-                    }
-                </div>
             </div>
-        </td>
+        </div>
     );
 }
 

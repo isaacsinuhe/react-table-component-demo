@@ -1,1 +1,1 @@
-export { TData } from './TData';
+export * from './TData';

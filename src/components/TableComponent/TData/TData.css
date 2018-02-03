@@ -1,19 +1,25 @@
-.TData {
-    padding: 5px;
-    border: 2px solid red;
-}
-.TData .content {
-    display: flex;
-}
-.TData .data {
-    padding: 2px;
-    align-self: center;
-    vertical-align: middle;
-    display: flex;
-    flex-flow: column nowrap;
-}
-.TData img.avatar {
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+@media only screen
+and (max-width: 519px) {
+    .TData .data {
+        width: 100%;
+        color: red;
+    }
+    .TData {
+        flex: 0 1 100%;
+        display: flex;
+        padding: 5px;
+        border: 2px solid red;
+        align-items: center;
+    }
+    
+    .TData .dataContainer {
+        padding: 2px;
+        flex-flow: column nowrap;
+        display: flex;
+    }
+    .TData img.avatar {
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+    }
 }

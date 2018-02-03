@@ -1,14 +1,16 @@
 import * as React from 'react';
+import { ReactElement } from 'react';
+import { THProps } from '../TH';
+import './THead.css';
 
-type THeadProps = {
-    children: JSX.Element | JSX.Element[]
+export type THeadProps = {
+    children: ReactElement<THProps> | Array<ReactElement<THProps>>
 };
+
 export function THead (props: THeadProps) {
     return (
-        <thead>
-            <tr>
-                {props.children}
-            </tr>
-        </thead>
+        <div className="THead">
+            {props.children}
+        </div>
     );
 }

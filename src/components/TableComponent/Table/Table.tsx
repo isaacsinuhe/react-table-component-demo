@@ -1,16 +1,26 @@
 import * as React from 'react';
-// import { Column } from './Column';
+import './Table.css';
+import { ReactElement } from 'react';
+import { THead, TRows, THeadProps, TRowsProps, TFootProps, TFoot } from '../index';
 
-type  TableProps = {};
-type TableState = {};
+type TableProps = {
+    children: Array<ReactElement<THeadProps | TFootProps | TRowsProps>>
+};
 
-export class Table extends React.Component<TableProps, TableState> {
-
-    render () {
-        return (
-            <table>
-                {this.props.children}
-            </table>
-        );
-    }
+export function Table (props: TableProps) {
+    return (
+        <div className="Table">
+            <div className="main">
+                {
+                    props.children.filter(child => child.type === THead)
+                }
+                {
+                    props.children.filter(child => child.type === TRows)
+                }
+            </div>
+            <div className="foot">
+                {props.children.filter(child => child.type === TFoot)}
+            </div>
+        </div>
+    );
 }

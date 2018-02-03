@@ -1,0 +1,10 @@
+@media only screen
+and (max-width: 519px) {
+    .TH {
+        flex: 0 1 100%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        border: 2px solid red;
+    }
+}
