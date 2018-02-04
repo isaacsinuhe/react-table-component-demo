@@ -1,8 +1,15 @@
+.TRows .row:hover {
+    filter: brightness(90%);
+    transition: filter .1s ease-in-out;
+}
+.TRows {
+    color: darkslategray;
+}
 .TRows .row:nth-child(odd) {
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 .TRows .row:nth-child(even) {
-    background-color: lightslategray;
+    background-color: rgb(196, 195, 204);
 }
 .TRows::-webkit-scrollbar {
     display: none;
@@ -15,7 +22,8 @@ and (max-width: 519px) {
         flex: 0 1 70%;
         display: flex;
         flex-flow: row nowrap;
-        overflow: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
     }
     .TRows .row {
         flex: 0 1 100%;
@@ -31,7 +39,8 @@ and (max-width: 519px) {
 and (min-width: 520px)
 and (max-width: 759px) {
     .TRows {
-        flex: 0 1 85%;
+        height: calc(100% - 50px);
+        flex: 1 1 auto;
         display: flex;
         flex-flow: column nowrap;
         overflow: auto;
@@ -50,7 +59,26 @@ and (max-width: 759px) {
 and (min-width: 760px)
 and (max-width: 959px) {
     .TRows {
-        flex: 0 1 85%;
+        height: calc(100% - 60px);
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: auto;
+    }
+    .TRows .row {
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+    }
+}
+
+/* xl devices */
+@media only screen
+and (min-width: 960px) {
+    .TRows {
+        height: calc(100% - 60px);
+        flex: 1 1 auto;
         display: flex;
         flex-flow: column nowrap;
         overflow: auto;

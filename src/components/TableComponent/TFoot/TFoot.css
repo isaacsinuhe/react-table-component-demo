@@ -1,8 +1,13 @@
 .TFoot {
     height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica, Arial, Sans-Serif;
 }
 .TFoot .content{
-    padding: 5px;
+    width: 100%;
     text-align: center;
 }
 /* xs devices */

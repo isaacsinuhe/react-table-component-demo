@@ -10,12 +10,11 @@ export function TFoot (props: TFootProps) {
         <div className="TFoot">
             {
                 props.legend ?
-                <div>
                     <div className="content">
                         {props.legend}
                     </div>
-                </div> :
-                false
+                    :
+                    false
             }
         </div>
     );

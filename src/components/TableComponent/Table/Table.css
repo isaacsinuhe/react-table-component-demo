@@ -1,14 +1,15 @@
 .Table * {
     box-sizing: border-box;
 }
+.Table {
+    width: inherit;
+    height: inherit;
+}
 
 /* xs devices */
 @media only screen
 and (max-width: 519px) {
     .Table {
-        max-width: 519px;
-        height: 100%;
-        width: 100%;
         display: flex;
         flex-flow: column nowrap;
         align-items: stretch;
@@ -16,14 +17,14 @@ and (max-width: 519px) {
 
     .Table .main {
         flex: 1 1 auto;
-        height: 90%;
+        height: 93%;
         display: flex;
         flex-flow: row nowrap;
     }
     
     .Table .foot {
         border: solid;
-        height: 10%;
+        height: 7%;
     }
 }
 
@@ -32,16 +33,12 @@ and (max-width: 519px) {
 and (min-width: 520px)
 and (max-width: 759px) {
     .Table {
-        min-width: 520px;
-        max-width: 759px;
-        height: 100%;
-        width: 100%;
         display: flex;
         flex-flow: column nowrap;
     }
-
+    
     .Table .main {
-        height: 90%;
+        height: calc(100% - 30px);
         flex: 1 1 auto;
         display: flex;
         flex-flow: column nowrap;
@@ -49,7 +46,7 @@ and (max-width: 759px) {
     
     .Table .foot {
         border: solid;
-        height: 10%;
+        height: 30px;
     }
 }
 
@@ -58,16 +55,12 @@ and (max-width: 759px) {
 and (min-width: 760px)
 and (max-width: 959px) {
     .Table {
-        min-width: 760px;
-        max-width: 959px;
-        height: 100%;
-        width: 100%;
         display: flex;
         flex-flow: column nowrap;
     }
 
     .Table .main {
-        height: 90%;
+        height: calc(100% - 40px);
         flex: 1 1 auto;
         display: flex;
         flex-flow: column nowrap;
@@ -75,13 +68,25 @@ and (max-width: 959px) {
     
     .Table .foot {
         border: solid;
-        height: 10%;
+        height: 40px;
     }
 }
 
+/* xl devices */
 @media only screen
 and (min-width: 960px) {
     .Table {
-        min-width: 960px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .Table .main {
+        height: calc(100% - 40px);
+        flex: 1 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .Table .foot {
+        border: solid;
+        height: 40px;
     }
 }

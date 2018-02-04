@@ -1,27 +1,36 @@
+.TData {
+    background-color: inherit;
+    border: 1px solid white;
+    padding: 0 15px;    
+    transition: transform .1s ease-in-out;
+}
+.TData:hover {
+    z-index: 100;
+    border-width: 3px;
+    transform: scale(1.2) scaleZ(1);
+}
+.TData .data {
+    width: 100%;
+}
+
+.TData img.avatar {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
 /* xs devices */
 @media only screen
 and (max-width: 519px) {
-    .TData .data {
-        width: 100%;
-        color: red;
-    }
     .TData {
         flex: 0 1 100%;
         display: flex;
-        padding: 5px;
-        border: 2px solid red;
         align-items: center;
         overflow: hidden;
     }
     .TData .dataContainer {
-        padding: 2px;
         flex-flow: column nowrap;
         display: flex;
-    }
-    .TData img.avatar {
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
     }
 }
 
@@ -32,27 +41,15 @@ and (max-width: 759px) {
     .TData {
         flex: 0 1 100%;
         display: flex;
-        padding: 5px;
-        border: 2px solid red;
         overflow: hidden;
         align-items: center;
     }
     .TData .dataContainer {
-        padding: 2px;
         flex-flow: column nowrap;
         display: flex;
         overflow-wrap: break-word;
         word-wrap: break-word;
         word-break: break-word;
-    }
-    .TData img.avatar {
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-    }
-    .TData .data {
-        width: 100%;
-        color: red;
     }
 }
 
@@ -63,26 +60,32 @@ and (max-width: 959px) {
     .TData {
         flex: 0 1 100%;
         display: flex;
-        padding: 5px;
-        border: 2px solid red;
         overflow: hidden;
         align-items: center;
     }
     .TData .dataContainer {
-        padding: 2px;
         flex-flow: column nowrap;
         display: flex;
         overflow-wrap: break-word;
         word-wrap: break-word;
         word-break: break-word;
     }
-    .TData img.avatar {
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
+}
+
+/* xl devices */
+@media only screen
+and (min-width: 960px) {
+    .TData {
+        flex: 0 1 100%;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
     }
-    .TData .data {
-        width: 100%;
-        color: red;
+    .TData .dataContainer {
+        flex-flow: column nowrap;
+        display: flex;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
     }
 }
