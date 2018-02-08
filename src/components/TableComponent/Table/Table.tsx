@@ -1,7 +1,7 @@
 import * as React from 'react';
-import './Table.css';
 import { ReactElement } from 'react';
 import { THead, TRows, THeadProps, TRowsProps, TFootProps, TFoot } from '../index';
+import './Table.base.css';
 
 type TableProps = {
     children: Array<ReactElement<THeadProps | TFootProps | TRowsProps>>
