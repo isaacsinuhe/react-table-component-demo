@@ -14,11 +14,18 @@ comand in the terminal
 git clone https://github.com/isaacsinuhe/react-table-component-demo.git
 ```
 
+**You must have installed yarn to run the project.**
+
 then you must install all of the dependencies from the cloned folder
  ```
  cd react-table-component-demo
  yarn install
  ```
+
+and finally to run the project you must run it by typing in the terminal the following command:
+```
+yarn start
+```
 
 ## Basic Component Usage
 The component follows a similar markup as the table html tags.
